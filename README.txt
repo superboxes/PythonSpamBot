@@ -1,8 +1,7 @@
 Password: 1
 
-Lietuvos spambotas.
 Made by SuperBoxes
+Please Do not steal!
 
-Exe failas turi buti toi pacioj vietoje kur yra dvi nuotraukos(halal.png ir download.png)
-Jei istrinsi, programa neveiks.
+Exe file has to be in the same place as as two imgaes and README files.
 Enjoy!
