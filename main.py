@@ -19,7 +19,7 @@ if lines == password:
             keyboard.type(zodis)
             keyboard.press(Key.enter)
             time.sleep(laikas)
-        messagebox.showinfo(title="Info", message="Spambotas baigtas, dabar turi isjungti programa!")
+        messagebox.showinfo(title="Info", message="SpamBot is done, now you have to turn off the program!")
         quit()
         exit()
 
@@ -35,7 +35,7 @@ if lines == password:
             keyboard.press(Key.enter)
         spambotFinished = True
         allFinished = True
-        messagebox.showinfo(title="Info", message="Spambotas baigtas, dabar turi isjungti programa!")
+        messagebox.showinfo(title="Info", message="SpamBot is done, now you have to turn off the program!")
         quit()
         exit()
 
@@ -53,22 +53,22 @@ if lines == password:
             global laikas
             zodis = zodiss.get()
             try:
-                kartai = int(kartais.get())
+                kartai = int(float(kartais.get()))
             except ValueError:
                 messagebox.showwarning(title="Dumbass",
-                                       message="Per kartu pasirinkima reikia irasyti skaiciu, o ne raide/sakini")
-                messagebox.showinfo(title="Dumbass", message="Dabar turi isjungti programa!")
+                                       message="In the Times choice, you have to enter a number")
+                messagebox.showinfo(title="Dumbass", message="Now you have to turn off the program!")
             try:
-                laikas = int(laikass.get())
+                laikas = int(float(laikass.get()))
             except ValueError:
                 messagebox.showwarning(title="Dumbass",
-                                       message="Per delay pasirinkima reikia irasyt skaiciu, o ne raide/sakini!")
-                messagebox.showinfo(title="Dumbass", message="Dabar turi isjungti programa!")
+                                       message="In the Delay choice, you have to enter a number")
+                messagebox.showinfo(title="Dumbass", message="Now you have to turn off the program!")
             window.destroy()
             window1 = Tk()
             window1.title("Dicord SpamBot")
-            Label(window1, text="SpamBotas Veikia!", font=("Arial", '20', "bold")).pack()
-            messagebox.showinfo(title="Pasiruosimas", message="Kai paspausi ok, turesi 10 sec pasirinkti kur rasyti!")
+            Label(window1, text="SpamBot is working!", font=("Arial", '20', "bold")).pack()
+            messagebox.showinfo(title="Info", message="When you press ok, you will have 10 seconds to choose where the spambot will write")
             time.sleep(10)
             x = threading.Thread(target=spambotDiscord(zodis, kartai, laikas), daemon=True)
             x.start
@@ -103,19 +103,19 @@ if lines == password:
             global laikas
             zodis = zodiss.get()
             try:
-                kartai = int(kartais.get())
+                kartai = int(float(kartais.get()))
             except ValueError:
-                messagebox.showwarning(title="Dumbass", message="Per kartu pasirinkima reikia irasyti skaiciu, o ne raide/sakini")
-                messagebox.showinfo(title="Dumbass", message="Dabar turi isjungti programa!")
+                messagebox.showwarning(title="Dumbass", message="In the Times choice, you have to enter a number")
+                messagebox.showinfo(title="Dumbass", message="Now you have to turn off the program!")
             try:
-                laikas = int(laikass.get())
+                laikas = int(float(laikass.get()))
             except ValueError:
-                messagebox.showwarning(title="Dumbass", message="Per delay pasirinkima reikia irasyt skaiciu, o ne raide/sakini!")
-                messagebox.showinfo(title="Dumbass", message="Dabar turi isjungti programa!")
+                messagebox.showwarning(title="Dumbass", message="In the Delay choice, you have to enter a number")
+                messagebox.showinfo(title="Dumbass", message="Now you have to turn off the program!")
             window.destroy()
             window1 = Tk()
-            Label(window1, text="SpamBotas Veikia!", font=("Arial", '20', "bold")).pack()
-            messagebox.showinfo(title="Pasiruosimas", message="Kai paspausi ok, turesi 10 sec pasirinkti kur rasyti!")
+            Label(window1, text="SpamBot is working!", font=("Arial", '20', "bold")).pack()
+            messagebox.showinfo(title="Info", message="When you press ok, you will have 10 seconds to choose where the spambot will write")
             time.sleep(10)
             z = threading.Thread(target=spambotMinecraft(zodis, kartai, laikas), daemon=True)
             z.start
@@ -147,7 +147,7 @@ if lines == password:
     icon = PhotoImage(file='download.png')
     root.geometry("300x243")
     root.iconphoto(True, icon)
-    Label(root, text="Pasirink spamboto tipa:",
+    Label(root, text="Choose SpamBot type:",
           font=("Arial", '15', "bold")).pack(side=TOP)
 
     button1 = Button(root,
